@@ -6,30 +6,8 @@ using System.Threading.Tasks;
 
 namespace MeramecNetFlixProject.Business_Objects
 {
-    class Member
+    public class Member
     {
-        public Member(int member_number, DateTime joindate, string firstname, string lastname, string address, 
-            string city, string state, string zipcode, string phone, string member_status, string login_name, 
-            string password, string email, int contact_method, int subscription_id, string photo)
-        {
-            Member_number = member_number;
-            Joindate = joindate;
-            Firstname = firstname;
-            Lastname = lastname;
-            Address = address;
-            City = city;
-            State = state;
-            Zipcode = zipcode;
-            Phone = phone;
-            Member_status = member_status;
-            Login_name = login_name;
-            Password = password;
-            Email = email;
-            Contact_method = contact_method;
-            Subscription_id = subscription_id;
-            Photo = photo;
-        }
-
         public int Member_number { get; set; }
         public DateTime Joindate { get; set; }
         public string Firstname { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace MeramecNetFlixProject
 {
-    partial class Member
+    partial class MemberDataEntry
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             System.Windows.Forms.Label member_statusLabel;
             System.Windows.Forms.Label contact_methodLabel;
             System.Windows.Forms.Label subscription_idLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Member));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberDataEntry));
             this.rb_active = new System.Windows.Forms.RadioButton();
             this.rb_inact = new System.Windows.Forms.RadioButton();
             this.rb_contact1 = new System.Windows.Forms.RadioButton();
@@ -59,8 +59,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.iS253_EmeryDataSet = new MeramecNetFlixProject.IS253_EmeryDataSet();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.memberTableAdapter = new MeramecNetFlixProject.IS253_EmeryDataSetTableAdapters.MemberTableAdapter();
             this.tableAdapterManager = new MeramecNetFlixProject.IS253_EmeryDataSetTableAdapters.TableAdapterManager();
             this.memberBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -93,14 +91,16 @@
             this.subscription_idTextBox = new System.Windows.Forms.TextBox();
             this.photoTextBox = new System.Windows.Forms.TextBox();
             this.gbx_memberStatus = new System.Windows.Forms.GroupBox();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iS253_EmeryDataSet = new MeramecNetFlixProject.IS253_EmeryDataSet();
             member_statusLabel = new System.Windows.Forms.Label();
             contact_methodLabel = new System.Windows.Forms.Label();
             subscription_idLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.iS253_EmeryDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingNavigator)).BeginInit();
             this.memberBindingNavigator.SuspendLayout();
             this.gbx_memberStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS253_EmeryDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // member_statusLabel
@@ -133,7 +133,6 @@
             // rb_active
             // 
             this.rb_active.AutoSize = true;
-            this.rb_active.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.memberBindingSource, "member_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.rb_active.Location = new System.Drawing.Point(23, 19);
             this.rb_active.Name = "rb_active";
             this.rb_active.Size = new System.Drawing.Size(55, 17);
@@ -146,7 +145,6 @@
             // rb_inact
             // 
             this.rb_inact.AutoSize = true;
-            this.rb_inact.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.memberBindingSource, "member_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.rb_inact.Location = new System.Drawing.Point(23, 42);
             this.rb_inact.Name = "rb_inact";
             this.rb_inact.Size = new System.Drawing.Size(63, 17);
@@ -382,16 +380,6 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // iS253_EmeryDataSet
-            // 
-            this.iS253_EmeryDataSet.DataSetName = "IS253_EmeryDataSet";
-            this.iS253_EmeryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataMember = "Member";
-            this.memberBindingSource.DataSource = this.iS253_EmeryDataSet;
-            // 
             // memberTableAdapter
             // 
             this.memberTableAdapter.ClearBeforeFill = true;
@@ -534,7 +522,6 @@
             // 
             // member_numberTextBox
             // 
-            this.member_numberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "member_number", true));
             this.member_numberTextBox.Location = new System.Drawing.Point(112, 273);
             this.member_numberTextBox.Name = "member_numberTextBox";
             this.member_numberTextBox.Size = new System.Drawing.Size(200, 20);
@@ -542,7 +529,6 @@
             // 
             // joindateDateTimePicker
             // 
-            this.joindateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.memberBindingSource, "joindate", true));
             this.joindateDateTimePicker.Location = new System.Drawing.Point(112, 297);
             this.joindateDateTimePicker.Name = "joindateDateTimePicker";
             this.joindateDateTimePicker.Size = new System.Drawing.Size(200, 20);
@@ -550,7 +536,6 @@
             // 
             // firstnameTextBox
             // 
-            this.firstnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "firstname", true));
             this.firstnameTextBox.Location = new System.Drawing.Point(112, 323);
             this.firstnameTextBox.Name = "firstnameTextBox";
             this.firstnameTextBox.Size = new System.Drawing.Size(200, 20);
@@ -559,7 +544,6 @@
             // 
             // lastnameTextBox
             // 
-            this.lastnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "lastname", true));
             this.lastnameTextBox.Location = new System.Drawing.Point(112, 347);
             this.lastnameTextBox.Name = "lastnameTextBox";
             this.lastnameTextBox.Size = new System.Drawing.Size(200, 20);
@@ -567,7 +551,6 @@
             // 
             // addressTextBox
             // 
-            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "address", true));
             this.addressTextBox.Location = new System.Drawing.Point(112, 373);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(200, 20);
@@ -575,7 +558,6 @@
             // 
             // cityTextBox
             // 
-            this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "city", true));
             this.cityTextBox.Location = new System.Drawing.Point(112, 399);
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(200, 20);
@@ -583,7 +565,6 @@
             // 
             // stateTextBox
             // 
-            this.stateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "state", true));
             this.stateTextBox.Location = new System.Drawing.Point(389, 392);
             this.stateTextBox.Name = "stateTextBox";
             this.stateTextBox.Size = new System.Drawing.Size(110, 20);
@@ -591,7 +572,6 @@
             // 
             // zipcodeTextBox
             // 
-            this.zipcodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "zipcode", true));
             this.zipcodeTextBox.Location = new System.Drawing.Point(567, 392);
             this.zipcodeTextBox.Name = "zipcodeTextBox";
             this.zipcodeTextBox.Size = new System.Drawing.Size(200, 20);
@@ -599,7 +579,6 @@
             // 
             // phoneTextBox
             // 
-            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "phone", true));
             this.phoneTextBox.Location = new System.Drawing.Point(112, 425);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(200, 20);
@@ -607,7 +586,6 @@
             // 
             // member_statusTextBox
             // 
-            this.member_statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "member_status", true));
             this.member_statusTextBox.Location = new System.Drawing.Point(109, 221);
             this.member_statusTextBox.Name = "member_statusTextBox";
             this.member_statusTextBox.Size = new System.Drawing.Size(200, 20);
@@ -615,7 +593,6 @@
             // 
             // login_nameTextBox
             // 
-            this.login_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "login_name", true));
             this.login_nameTextBox.Location = new System.Drawing.Point(389, 448);
             this.login_nameTextBox.Name = "login_nameTextBox";
             this.login_nameTextBox.Size = new System.Drawing.Size(110, 20);
@@ -623,7 +600,6 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "password", true));
             this.passwordTextBox.Location = new System.Drawing.Point(567, 448);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(200, 20);
@@ -631,7 +607,6 @@
             // 
             // emailTextBox
             // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "email", true));
             this.emailTextBox.Location = new System.Drawing.Point(112, 451);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(200, 20);
@@ -639,7 +614,6 @@
             // 
             // contact_methodTextBox
             // 
-            this.contact_methodTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "contact_method", true));
             this.contact_methodTextBox.Location = new System.Drawing.Point(467, 224);
             this.contact_methodTextBox.Name = "contact_methodTextBox";
             this.contact_methodTextBox.Size = new System.Drawing.Size(200, 20);
@@ -647,7 +621,6 @@
             // 
             // subscription_idTextBox
             // 
-            this.subscription_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "subscription_id", true));
             this.subscription_idTextBox.Location = new System.Drawing.Point(467, 250);
             this.subscription_idTextBox.Name = "subscription_idTextBox";
             this.subscription_idTextBox.Size = new System.Drawing.Size(200, 20);
@@ -655,7 +628,6 @@
             // 
             // photoTextBox
             // 
-            this.photoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "photo", true));
             this.photoTextBox.Location = new System.Drawing.Point(563, 49);
             this.photoTextBox.Name = "photoTextBox";
             this.photoTextBox.Size = new System.Drawing.Size(200, 20);
@@ -670,9 +642,18 @@
             this.gbx_memberStatus.Size = new System.Drawing.Size(138, 79);
             this.gbx_memberStatus.TabIndex = 71;
             this.gbx_memberStatus.TabStop = false;
-            this.gbx_memberStatus.Text = "Member Status";
+            this.gbx_memberStatus.Text = "MemberDataEntry Status";
             // 
-            // Member
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataMember = "Member";
+            // 
+            // iS253_EmeryDataSet
+            // 
+            this.iS253_EmeryDataSet.DataSetName = "IS253_EmeryDataSet";
+            this.iS253_EmeryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // MemberDataEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -722,16 +703,16 @@
             this.Controls.Add(this.rb_contact3);
             this.Controls.Add(this.rb_contact2);
             this.Controls.Add(this.rb_contact1);
-            this.Name = "Member";
+            this.Name = "MemberDataEntry";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Member_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iS253_EmeryDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingNavigator)).EndInit();
             this.memberBindingNavigator.ResumeLayout(false);
             this.memberBindingNavigator.PerformLayout();
             this.gbx_memberStatus.ResumeLayout(false);
             this.gbx_memberStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iS253_EmeryDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -765,8 +746,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private IS253_EmeryDataSet iS253_EmeryDataSet;
-        private System.Windows.Forms.BindingSource memberBindingSource;
         private IS253_EmeryDataSetTableAdapters.MemberTableAdapter memberTableAdapter;
         private IS253_EmeryDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator memberBindingNavigator;
@@ -799,5 +778,7 @@
         private System.Windows.Forms.TextBox subscription_idTextBox;
         private System.Windows.Forms.TextBox photoTextBox;
         private System.Windows.Forms.GroupBox gbx_memberStatus;
+        private System.Windows.Forms.BindingSource memberBindingSource;
+        private IS253_EmeryDataSet iS253_EmeryDataSet;
     }
 }

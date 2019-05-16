@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace MeramecNetFlixProject
 {
-    public partial class Member : Form
+    public partial class MemberDataEntry : Form
     {
         
         int memberStatus;   // 1 = active, 0 = inactive
 
-        public Member()
+        public MemberDataEntry()
         {
             InitializeComponent();
 
@@ -65,7 +65,7 @@ namespace MeramecNetFlixProject
 
         private void Member_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'iS253_EmeryDataSet.Member' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'iS253_EmeryDataSet.MemberDataEntry' table. You can move, or remove it, as needed.
             this.memberTableAdapter.Fill(this.iS253_EmeryDataSet.Member);
 
         }

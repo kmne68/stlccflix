@@ -1,6 +1,6 @@
 ﻿namespace MeramecNetFlixProject
 {
-    partial class Form1
+    partial class Movie
     {
         /// <summary>
         /// Required designer variable.

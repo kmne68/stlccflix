@@ -17,7 +17,7 @@ namespace MeramecNetFlixProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Member());
+            Application.Run(new Login());
         }
     }
 }

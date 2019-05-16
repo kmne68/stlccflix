@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,23 +56,24 @@
     <Compile Include="Business Objects\Vendor.cs" />
     <Compile Include="Data Access Layer\AccessDataSQLServer.cs" />
     <Compile Include="Business Objects\MyCustomObject.cs" />
+    <Compile Include="Data Access Layer\MemberDB.cs" />
     <Compile Include="Data Access Layer\SkeletonTableNameDB.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Movie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Movie.Designer.cs">
+      <DependentUpon>Movie.cs</DependentUpon>
     </Compile>
     <Compile Include="IS253_EmeryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IS253_EmeryDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Member.cs">
+    <Compile Include="MemberDataEntry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Member.Designer.cs">
-      <DependentUpon>Member.cs</DependentUpon>
+    <Compile Include="MemberDataEntry.Designer.cs">
+      <DependentUpon>MemberDataEntry.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
@@ -81,11 +83,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Movie.resx">
+      <DependentUpon>Movie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Member.resx">
-      <DependentUpon>Member.cs</DependentUpon>
+    <EmbeddedResource Include="MemberDataEntry.resx">
+      <DependentUpon>MemberDataEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="IS253_EmeryDataSet.xsc">
       <DependentUpon>IS253_EmeryDataSet.xsd</DependentUpon>

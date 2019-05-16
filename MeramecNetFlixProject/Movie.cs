@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MeramecNetFlixProject
 {
-    public partial class Form1 : Form
+    public partial class Movie : Form
     {
-        public Form1()
+        public Movie()
         {
             InitializeComponent();
         }

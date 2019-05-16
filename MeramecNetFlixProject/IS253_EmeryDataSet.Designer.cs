@@ -72,8 +72,8 @@ namespace MeramecNetFlixProject {
                 if ((ds.Tables["Genre"] != null)) {
                     base.Tables.Add(new GenreDataTable(ds.Tables["Genre"]));
                 }
-                if ((ds.Tables["Member"] != null)) {
-                    base.Tables.Add(new MemberDataTable(ds.Tables["Member"]));
+                if ((ds.Tables["MemberDataEntry"] != null)) {
+                    base.Tables.Add(new MemberDataTable(ds.Tables["MemberDataEntry"]));
                 }
                 if ((ds.Tables["Movie"] != null)) {
                     base.Tables.Add(new MovieDataTable(ds.Tables["Movie"]));
@@ -248,8 +248,8 @@ namespace MeramecNetFlixProject {
                 if ((ds.Tables["Genre"] != null)) {
                     base.Tables.Add(new GenreDataTable(ds.Tables["Genre"]));
                 }
-                if ((ds.Tables["Member"] != null)) {
-                    base.Tables.Add(new MemberDataTable(ds.Tables["Member"]));
+                if ((ds.Tables["MemberDataEntry"] != null)) {
+                    base.Tables.Add(new MemberDataTable(ds.Tables["MemberDataEntry"]));
                 }
                 if ((ds.Tables["Movie"] != null)) {
                     base.Tables.Add(new MovieDataTable(ds.Tables["Movie"]));
@@ -308,7 +308,7 @@ namespace MeramecNetFlixProject {
                     this.tableGenre.InitVars();
                 }
             }
-            this.tableMember = ((MemberDataTable)(base.Tables["Member"]));
+            this.tableMember = ((MemberDataTable)(base.Tables["MemberDataEntry"]));
             if ((initTable == true)) {
                 if ((this.tableMember != null)) {
                     this.tableMember.InitVars();
@@ -1072,7 +1072,7 @@ namespace MeramecNetFlixProject {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public MemberDataTable() {
-                this.TableName = "Member";
+                this.TableName = "MemberDataEntry";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3057,7 +3057,7 @@ namespace MeramecNetFlixProject {
                         return ((int)(this[this.tableMember.contact_methodColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'contact_method\' in table \'Member\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'contact_method\' in table \'MemberDataEntry\' is DBNull.", e);
                     }
                 }
                 set {
@@ -3084,7 +3084,7 @@ namespace MeramecNetFlixProject {
                         return ((string)(this[this.tableMember.photoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'photo\' in table \'Member\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'photo\' in table \'MemberDataEntry\' is DBNull.", e);
                     }
                 }
                 set {
@@ -4467,7 +4467,7 @@ namespace MeramecNetFlixProject.IS253_EmeryDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Member";
+            tableMapping.DataSetTable = "MemberDataEntry";
             tableMapping.ColumnMappings.Add("member_number", "member_number");
             tableMapping.ColumnMappings.Add("joindate", "joindate");
             tableMapping.ColumnMappings.Add("firstname", "firstname");
@@ -4487,7 +4487,7 @@ namespace MeramecNetFlixProject.IS253_EmeryDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Member] WHERE (([member_number] = @Original_member_number) AND ([joindate] = @Original_joindate) AND ([firstname] = @Original_firstname) AND ([lastname] = @Original_lastname) AND ([address] = @Original_address) AND ([city] = @Original_city) AND ([state] = @Original_state) AND ([zipcode] = @Original_zipcode) AND ([phone] = @Original_phone) AND ([member_status] = @Original_member_status) AND ([login_name] = @Original_login_name) AND ([password] = @Original_password) AND ([email] = @Original_email) AND ((@IsNull_contact_method = 1 AND [contact_method] IS NULL) OR ([contact_method] = @Original_contact_method)) AND ([subscription_id] = @Original_subscription_id) AND ((@IsNull_photo = 1 AND [photo] IS NULL) OR ([photo] = @Original_photo)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[MemberDataEntry] WHERE (([member_number] = @Original_member_number) AND ([joindate] = @Original_joindate) AND ([firstname] = @Original_firstname) AND ([lastname] = @Original_lastname) AND ([address] = @Original_address) AND ([city] = @Original_city) AND ([state] = @Original_state) AND ([zipcode] = @Original_zipcode) AND ([phone] = @Original_phone) AND ([member_status] = @Original_member_status) AND ([login_name] = @Original_login_name) AND ([password] = @Original_password) AND ([email] = @Original_email) AND ((@IsNull_contact_method = 1 AND [contact_method] IS NULL) OR ([contact_method] = @Original_contact_method)) AND ([subscription_id] = @Original_subscription_id) AND ((@IsNull_photo = 1 AND [photo] IS NULL) OR ([photo] = @Original_photo)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_joindate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "joindate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4509,8 +4509,8 @@ namespace MeramecNetFlixProject.IS253_EmeryDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_photo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "photo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Member] ([member_number], [joindate], [firstname], [lastname], [address], [city], [state], [zipcode], [phone], [member_status], [login_name], [password], [email], [contact_method], [subscription_id], [photo]) VALUES (@member_number, @joindate, @firstname, @lastname, @address, @city, @state, @zipcode, @phone, @member_status, @login_name, @password, @email, @contact_method, @subscription_id, @photo);
-SELECT member_number, joindate, firstname, lastname, address, city, state, zipcode, phone, member_status, login_name, password, email, contact_method, subscription_id, photo FROM Member WHERE (member_number = @member_number)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MemberDataEntry] ([member_number], [joindate], [firstname], [lastname], [address], [city], [state], [zipcode], [phone], [member_status], [login_name], [password], [email], [contact_method], [subscription_id], [photo]) VALUES (@member_number, @joindate, @firstname, @lastname, @address, @city, @state, @zipcode, @phone, @member_status, @login_name, @password, @email, @contact_method, @subscription_id, @photo);
+SELECT member_number, joindate, firstname, lastname, address, city, state, zipcode, phone, member_status, login_name, password, email, contact_method, subscription_id, photo FROM MemberDataEntry WHERE (member_number = @member_number)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@joindate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "joindate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4530,8 +4530,8 @@ SELECT member_number, joindate, firstname, lastname, address, city, state, zipco
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@photo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Member] SET [member_number] = @member_number, [joindate] = @joindate, [firstname] = @firstname, [lastname] = @lastname, [address] = @address, [city] = @city, [state] = @state, [zipcode] = @zipcode, [phone] = @phone, [member_status] = @member_status, [login_name] = @login_name, [password] = @password, [email] = @email, [contact_method] = @contact_method, [subscription_id] = @subscription_id, [photo] = @photo WHERE (([member_number] = @Original_member_number) AND ([joindate] = @Original_joindate) AND ([firstname] = @Original_firstname) AND ([lastname] = @Original_lastname) AND ([address] = @Original_address) AND ([city] = @Original_city) AND ([state] = @Original_state) AND ([zipcode] = @Original_zipcode) AND ([phone] = @Original_phone) AND ([member_status] = @Original_member_status) AND ([login_name] = @Original_login_name) AND ([password] = @Original_password) AND ([email] = @Original_email) AND ((@IsNull_contact_method = 1 AND [contact_method] IS NULL) OR ([contact_method] = @Original_contact_method)) AND ([subscription_id] = @Original_subscription_id) AND ((@IsNull_photo = 1 AND [photo] IS NULL) OR ([photo] = @Original_photo)));
-SELECT member_number, joindate, firstname, lastname, address, city, state, zipcode, phone, member_status, login_name, password, email, contact_method, subscription_id, photo FROM Member WHERE (member_number = @member_number)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[MemberDataEntry] SET [member_number] = @member_number, [joindate] = @joindate, [firstname] = @firstname, [lastname] = @lastname, [address] = @address, [city] = @city, [state] = @state, [zipcode] = @zipcode, [phone] = @phone, [member_status] = @member_status, [login_name] = @login_name, [password] = @password, [email] = @email, [contact_method] = @contact_method, [subscription_id] = @subscription_id, [photo] = @photo WHERE (([member_number] = @Original_member_number) AND ([joindate] = @Original_joindate) AND ([firstname] = @Original_firstname) AND ([lastname] = @Original_lastname) AND ([address] = @Original_address) AND ([city] = @Original_city) AND ([state] = @Original_state) AND ([zipcode] = @Original_zipcode) AND ([phone] = @Original_phone) AND ([member_status] = @Original_member_status) AND ([login_name] = @Original_login_name) AND ([password] = @Original_password) AND ([email] = @Original_email) AND ((@IsNull_contact_method = 1 AND [contact_method] IS NULL) OR ([contact_method] = @Original_contact_method)) AND ([subscription_id] = @Original_subscription_id) AND ((@IsNull_photo = 1 AND [photo] IS NULL) OR ([photo] = @Original_photo)));
+SELECT member_number, joindate, firstname, lastname, address, city, state, zipcode, phone, member_status, login_name, password, email, contact_method, subscription_id, photo FROM MemberDataEntry WHERE (member_number = @member_number)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@joindate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "joindate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4584,7 +4584,7 @@ SELECT member_number, joindate, firstname, lastname, address, city, state, zipco
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT member_number, joindate, firstname, lastname, address, city, state, zipcod" +
                 "e, phone, member_status, login_name, password, email, contact_method, subscripti" +
-                "on_id, photo FROM dbo.Member";
+                "on_id, photo FROM dbo.MemberDataEntry";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4623,7 +4623,7 @@ SELECT member_number, joindate, firstname, lastname, address, city, state, zipco
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(IS253_EmeryDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Member");
+            return this.Adapter.Update(dataSet, "MemberDataEntry");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5844,41 +5844,41 @@ SELECT movie_number, movie_title, Description, movie_year_made, genre_id, movie_
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Rental";
             tableMapping.ColumnMappings.Add("dbo.Movie.movie_number", "dbo_Movie_movie_number");
-            tableMapping.ColumnMappings.Add("dbo.Member.member_number", "dbo_Member_member_number");
+            tableMapping.ColumnMappings.Add("dbo.MemberDataEntry.member_number", "dbo_Member_member_number");
             tableMapping.ColumnMappings.Add("media_checkout_date", "media_checkout_date");
             tableMapping.ColumnMappings.Add("media_return_date", "media_return_date");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Rental] WHERE (([dbo.Movie.movie_number] = @p2) AND ([dbo.Member.member_number] = @p4) AND ([media_checkout_date] = @Original_media_checkout_date) AND ((@IsNull_media_return_date = 1 AND [media_return_date] IS NULL) OR ([media_return_date] = @Original_media_return_date)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Rental] WHERE (([dbo.Movie.movie_number] = @p2) AND ([dbo.MemberDataEntry.member_number] = @p4) AND ([media_checkout_date] = @Original_media_checkout_date) AND ((@IsNull_media_return_date = 1 AND [media_return_date] IS NULL) OR ([media_return_date] = @Original_media_return_date)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.Movie.movie_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.Member.member_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.MemberDataEntry.member_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_media_checkout_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_checkout_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_media_return_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_return_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_media_return_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_return_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Rental] ([dbo.Movie.movie_number], [dbo.Member.member_number], [media_checkout_date], [media_return_date]) VALUES (@p1, @p3, @media_checkout_date, @media_return_date);
-SELECT [dbo.Movie.movie_number], [dbo.Member.member_number], media_checkout_date, media_return_date FROM Rental WHERE (dbo.Member.member_number = @dbo_Member_member_number) AND (dbo.Movie.movie_number = @dbo_Movie_movie_number) AND (media_checkout_date = @media_checkout_date)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Rental] ([dbo.Movie.movie_number], [dbo.MemberDataEntry.member_number], [media_checkout_date], [media_return_date]) VALUES (@p1, @p3, @media_checkout_date, @media_return_date);
+SELECT [dbo.Movie.movie_number], [dbo.MemberDataEntry.member_number], media_checkout_date, media_return_date FROM Rental WHERE (dbo.MemberDataEntry.member_number = @dbo_Member_member_number) AND (dbo.Movie.movie_number = @dbo_Movie_movie_number) AND (media_checkout_date = @media_checkout_date)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.Movie.movie_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.Member.member_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.MemberDataEntry.member_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@media_checkout_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_checkout_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@media_return_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_return_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dbo_Member_member_number", global::System.Data.SqlDbType.Variant, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dbo_Movie_movie_number", global::System.Data.SqlDbType.Variant, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Rental] SET [dbo.Movie.movie_number] = @p1, [dbo.Member.member_number] = @p3, [media_checkout_date] = @media_checkout_date, [media_return_date] = @media_return_date WHERE (([dbo.Movie.movie_number] = @p2) AND ([dbo.Member.member_number] = @p4) AND ([media_checkout_date] = @Original_media_checkout_date) AND ((@IsNull_media_return_date = 1 AND [media_return_date] IS NULL) OR ([media_return_date] = @Original_media_return_date)));
-SELECT [dbo.Movie.movie_number], [dbo.Member.member_number], media_checkout_date, media_return_date FROM Rental WHERE (dbo.Member.member_number = @dbo_Member_member_number) AND (dbo.Movie.movie_number = @dbo_Movie_movie_number) AND (media_checkout_date = @media_checkout_date)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Rental] SET [dbo.Movie.movie_number] = @p1, [dbo.MemberDataEntry.member_number] = @p3, [media_checkout_date] = @media_checkout_date, [media_return_date] = @media_return_date WHERE (([dbo.Movie.movie_number] = @p2) AND ([dbo.MemberDataEntry.member_number] = @p4) AND ([media_checkout_date] = @Original_media_checkout_date) AND ((@IsNull_media_return_date = 1 AND [media_return_date] IS NULL) OR ([media_return_date] = @Original_media_return_date)));
+SELECT [dbo.Movie.movie_number], [dbo.MemberDataEntry.member_number], media_checkout_date, media_return_date FROM Rental WHERE (dbo.MemberDataEntry.member_number = @dbo_Member_member_number) AND (dbo.Movie.movie_number = @dbo_Movie_movie_number) AND (media_checkout_date = @media_checkout_date)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.Movie.movie_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.Member.member_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.MemberDataEntry.member_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@media_checkout_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_checkout_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@media_return_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_return_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.Movie.movie_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.Member.member_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dbo.MemberDataEntry.member_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_media_checkout_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_checkout_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_media_return_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_return_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_media_return_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "media_return_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5899,7 +5899,7 @@ SELECT [dbo.Movie.movie_number], [dbo.Member.member_number], media_checkout_date
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [dbo.Movie.movie_number], [dbo.Member.member_number], media_checkout_date," +
+            this._commandCollection[0].CommandText = "SELECT [dbo.Movie.movie_number], [dbo.MemberDataEntry.member_number], media_checkout_date," +
                 " media_return_date FROM dbo.Rental";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
